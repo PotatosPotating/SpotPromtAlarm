@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/popup_layout"
+    android:background="@color/sky_blue">
+
+    <TextView
+        android:text="TextView"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_title" />
+
+    <TextView
+        android:text="TextView"
+        android:textSize="20dp"
+        android:textAllCaps="true"
+        android:textStyle="italic"
+        android:maxLines="10"
+        android:lines="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_description" />
+
+    <TextView
+        android:text="TextView"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_id" />
+
+    <Button
+        android:text="Done with alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_done_button" />
+</LinearLayout>

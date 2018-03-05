@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Spot Prompt Alarm</string>
+    <string name="title_activity_maps">Spot Prompt Alarm</string>
+    <string name="action_settings">Settings</string>
+</resources>

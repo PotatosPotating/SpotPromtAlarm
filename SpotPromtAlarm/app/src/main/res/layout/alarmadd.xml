@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sky_blue"
+    android:screenOrientation="landscape">
+
+    <Button
+        android:text="Add To Calander"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/calander_button"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:text="Latitude: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calander_button"
+        android:layout_alignParentStart="true"
+        android:id="@+id/spacer_latitude"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:text="Longitude:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spacer_longitude"
+        android:layout_alignBaseline="@+id/long_to_display"
+        android:layout_alignBottom="@+id/long_to_display"
+        android:layout_alignParentStart="true"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:text="Event ID:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spacer_longitude"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/event_id_textView"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/event_id"
+        android:layout_alignBaseline="@+id/event_id_textView"
+        android:layout_alignBottom="@+id/event_id_textView"
+        android:layout_toEndOf="@+id/long_to_display"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/long_to_display"
+        android:text="0"
+        android:layout_below="@+id/lat_to_display"
+        android:layout_toEndOf="@+id/lat_to_display"
+        android:layout_alignStart="@+id/lat_to_display"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lat_to_display"
+        android:text="0"
+        android:layout_marginStart="11dp"
+        android:layout_below="@+id/calander_button"
+        android:layout_toEndOf="@+id/spacer_event_name"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/event_id"
+        android:layout_alignStart="@+id/event_id"
+        android:id="@+id/event_name"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:text="Event Name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spacer_event_name"
+        android:layout_alignBaseline="@+id/event_name"
+        android:layout_alignBottom="@+id/event_name"
+        android:layout_alignParentStart="true"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:text="Event Notes:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/spacer_event_notes"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:id="@+id/event_notes"
+        tools:ignore="LabelFor"
+        android:layout_alignBaseline="@+id/spacer_event_notes"
+        android:layout_alignBottom="@+id/spacer_event_notes"
+        android:layout_alignStart="@+id/event_name" />
+
+    <Button
+        android:text="save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/calander_button"
+        android:layout_marginStart="13dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/spacer_event_notes">
+
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:calendarViewShown="false"
+            android:fitsSystemWindows="true"
+            android:id="@+id/datePicker"
+            android:layout_weight="1" />
+
+        <TimePicker
+            android:layout_width="206dp"
+            android:layout_height="314dp"
+            android:id="@+id/timePicker" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
